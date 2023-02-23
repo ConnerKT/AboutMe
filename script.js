@@ -98,23 +98,36 @@ function clickme(){
     if (i == Tries){
         alert("You lost :(. The random number was " + randomnumber + ".");
     }
-    let gametries = 6;
-    let y;
-
     
-    for (y = 0; y < complist.length; y++){
-        let complist = ["facebook","apple","netflix","amazon","google"];
-        //let complistlow= complist.map(complist => complist.toLowerCase());
-        let ans = prompt("What are the names of the FAANG Companies? (The best software engineering Companies)");
-        let anslow = ans.toLowerCase();
-        if (anslow == complist[y]){
-            alert("You got one of them, Congrats!")
-            break;
-        }else{
-            alert("Sorry that isn't one of the companies, try again :(")
-        }
-        if ( gametries == y)
-            alert("Nice try, you ran out of guesses, here are the companies: " + complist)
+
+    let complist = ["facebook","apple","netflix","amazon","google"];
+    let userans = [];
+    for (let i = 0; i < 6; i++){
+        userans.push(prompt("Guess one of the FAANG companies. (6 Guesses)"));
     }
+
+    let correct = false;
+
+    for (let i = 0; i < userans.length; i++){
+        
+        for (let j=0; j < complist.length; j++){
+            if (userans[i] == complist[j]){
+                correct = true;
+                break;
+            }else if (userans[i] != complist[j]){
+                correct = false;
+            }
+        }
+       
+        
+    if (correct) {
+        alert(userans[1] + " was correct!");
+    } else {
+        alert(userans[i] + " was not correct");
+    
+    }
+    
+    
 }
 
+}
