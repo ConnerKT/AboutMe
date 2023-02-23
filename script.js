@@ -2,7 +2,7 @@
 // console.log("Starting while statement")
 let username;
 while (true) {
-let username = prompt ("What is your name?");
+    username = prompt ("What is your name?");
 
 
     if (username === "") {
@@ -78,18 +78,43 @@ function clickme(){
     // username was the issue, not declared outside of while loop, so it didn't exist
     alert("Congrats" + " " + username + " " + "you made a" + " "+ x + " " + "out of 5!");
 
-    let randomnumber=math.floor(math.random() * 101);
-
+    let randomnumber=Math.floor(Math.random() * 101);
+    let Tries = 7;
+    let i;
     
-    for (tries in Range(4)){
-        let guessing_game=prompt("Welcome to my Guessing Game! I want you to guess a random number in 4 tries, if you get it right, you win!");
-
-        if (guessing_game > randomnumber)
-            alert ("You are lower than the number...");
+    for (i = 0; i < Tries; i++){
+        let guess=prompt("Welcome to my Guessing Game! I want you to guess a random number in 7 tries, if you get it right, you win! (1-100");
+        // I gave the user 7 tries because its from 1 to 100, I thought it would be more fun. but if I did do 4, I would just change my code a little :)
+        if (guess == randomnumber){
+            alert ("You got it, nice job!");
+            break;
+        }else if (guess < randomnumber) {
+            alert("Your guess was lower than the number...");
+        }else if (guess > randomnumber){
+            alert("Your guess was higher than the number...");
+        }
     }
 
+    if (i == Tries){
+        alert("You lost :(. The random number was " + randomnumber + ".");
+    }
+    let gametries = 6;
+    let y;
 
-
-
+    
+    for (y = 0; y < complist.length; y++){
+        let complist = ["facebook","apple","netflix","amazon","google"];
+        //let complistlow= complist.map(complist => complist.toLowerCase());
+        let ans = prompt("What are the names of the FAANG Companies? (The best software engineering Companies)");
+        let anslow = ans.toLowerCase();
+        if (anslow == complist[y]){
+            alert("You got one of them, Congrats!")
+            break;
+        }else{
+            alert("Sorry that isn't one of the companies, try again :(")
+        }
+        if ( gametries == y)
+            alert("Nice try, you ran out of guesses, here are the companies: " + complist)
+    }
 }
 
