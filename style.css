@@ -52,3 +52,12 @@ button:hover {
 .buttondiv {
     text-align: center;
 }
+#Exlist {
+    color:#fefae0;
+    font-size:50px;
+    text-shadow:black 2px 1px 2px;
+   
+}
+.gameslist {
+    text-align: center;
+}

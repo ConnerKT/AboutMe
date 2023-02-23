@@ -15,16 +15,17 @@ let username = prompt ("What is your name?");
 
 let x = 0;
 
+
 // console.log("Finishing while")
 
 function clickme(){
     "use strict";
     let origin = prompt("I grew up in Memphis!");
     let originlow = origin.toLowerCase();
-    if (originlow === "y" ||originlow === "yes" ){
+    if (originlow === "y" || originlow === "yes" ){
         alert("Correct!");
         x++;
-        console.log(x)
+        //console.log(x)
         // console.log("correct!")
     }else {
         alert("Incorrect.. :(");
@@ -75,6 +76,20 @@ function clickme(){
     //Its not the following for this alert function not working:
     //X variable, Function is being called, Function doesn't need to be recalled, The number goes up in console, the syntax is correct
     // username was the issue, not declared outside of while loop, so it didn't exist
-    alert("Congrats" + " " + username + " " + "you made a" + " "+ x + " " + "out of 5!");   
+    alert("Congrats" + " " + username + " " + "you made a" + " "+ x + " " + "out of 5!");
+
+    let randomnumber=math.floor(math.random() * 101);
+
+    
+    for (tries in Range(4)){
+        let guessing_game=prompt("Welcome to my Guessing Game! I want you to guess a random number in 4 tries, if you get it right, you win!");
+
+        if (guessing_game > randomnumber)
+            alert ("You are lower than the number...");
+    }
+
+
+
+
 }
 
