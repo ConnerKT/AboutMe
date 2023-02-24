@@ -109,7 +109,9 @@ function clickme(){
     let correct = false;
 
     for (let i = 0; i < userans.length; i++){
-        
+        if (userans[i] == null ) 
+            alert("Enter a company.")
+            break;
         for (let j=0; j < complist.length; j++){
             if (userans[i] == complist[j]){
                 correct = true;
