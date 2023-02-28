@@ -16,7 +16,7 @@ while (true) {
 let x = 0;
 
 
-// console.log("Finishing while")
+
 
 function clickme(){
     "use strict";
@@ -25,8 +25,7 @@ function clickme(){
     if (originlow === "y" || originlow === "yes" ){
         alert("Correct!");
         x++;
-        //console.log(x)
-        // console.log("correct!")
+ 
     }else {
         alert("Incorrect.. :(");
     }
@@ -35,19 +34,17 @@ function clickme(){
     if (agelow === "n" || agelow === "no" ){
         alert("Correct!");
         x++;
-        //console.log(x)
-        // console.log("correct!")
+        
     }else {
         alert("Incorrect.. :(");
-    // console.log(agelow)
+  
     }
     let experience = prompt("I started programming as a kid!");
     let experiencelow = experience.toLowerCase();
     if (experiencelow === "n" || experiencelow === "no" ){
         alert("Correct!");
         x++;
-        //console.log(x)
-        // console.log("correct!")
+        
     }else {
         alert("Incorrect.. :(");
     }
@@ -56,8 +53,7 @@ function clickme(){
     if (goallow === "n" || goallow === "no"){
         alert("Correct!");
         x++;
-        //console.log(x)
-        // console.log("correct!")
+      
     }else {
         alert("Incorrect.. :(");
     }
@@ -66,16 +62,12 @@ function clickme(){
     if (joblow === "n" || joblow === "no" ){
         alert("Correct!");
         x++;
-        //console.log(x)
-        // console.log("correct!")
+       
     }else {
         alert("Incorrect.. :(");
  
     }
-    //console.log(x)
-    //Its not the following for this alert function not working:
-    //X variable, Function is being called, Function doesn't need to be recalled, The number goes up in console, the syntax is correct
-    // username was the issue, not declared outside of while loop, so it didn't exist
+
     alert("Congrats" + " " + username + " " + "you made a" + " "+ x + " " + "out of 5!");
 
     let randomnumber=Math.floor(Math.random() * 101);
@@ -84,7 +76,7 @@ function clickme(){
     
     for (i = 0; i < Tries; i++){
         let guess=prompt("Welcome to my Guessing Game! I want you to guess a random number in 7 tries, if you get it right, you win! (1-100");
-        // I gave the user 7 tries because its from 1 to 100, I thought it would be more fun. but if I did do 4, I would just change my code a little :)
+       
         if (guess == randomnumber){
             alert ("You got it, nice job!");
             break;
